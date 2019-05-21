@@ -1,0 +1,126 @@
+body{
+  background-color:#444444;
+}
+
+/*Обертки*/
+.wrapper{
+  width: 1024px;
+  margin:auto;
+  height: 670px;
+}
+.insidewrapper{
+  width:950px;
+  margin:auto;
+  height:600px;
+}
+
+
+/*Стили для контента*/
+.contentBlockHeader{
+  background-color:#12110F;
+  height: 670px;
+}
+.ChangeAvtoModel{
+  padding-top:25px;
+  display: flex;
+  justify-content: space-around;
+}
+.Takeyourbest{
+  padding-top:10px;
+  color:#CBCBCB;
+  text-align:center;
+}
+.LineChangeModel{
+
+  background-color:#fff;
+  height: 670px;
+
+}
+
+/*Стиль для слайдера*/
+.d-block{
+  margin:auto;
+  padding-top:80px;
+}
+.carousel-control-next{
+  margin-top: 200px;
+}
+.carousel-control-prev{
+  margin-top: 200px;
+}
+.carousel{
+  height: 400px;
+}
+
+
+/*Стиль для навигации*/
+.contacts{
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  width:50%;
+  padding-top:20px;
+}
+.NavBar p{
+  color:#fff;
+}
+.Login{
+  border-radius:15px;
+  background-color:#fff;
+  width:100px;
+  height: 40px;
+}
+.PForHead{
+  padding-top:15px;
+}
+
+
+/*Подслайдерная область*/
+.BuyingCar{
+  display: flex;
+  justify-content: space-around;
+}
+.Pcenter{
+  text-align:center;
+  padding-top: 40px;
+  color:#fff;
+}
+.serch{
+  color:white;
+  background-color: transparent;
+  border-top:0px;
+  border-left:0px;
+  border-right:0px;
+}
+.buttonSerch {
+  background-color: blue;
+  border-radius: 15px
+}
+/*Автомобили*/
+.AllCar{
+  display: flex;
+  height: 470px;
+  padding-left:65px;
+  padding-top:30px;
+}
+.AllSeries{
+  padding-top:60px;
+  padding-left:70px;
+  color:#135EC5;
+}
+.forAllCar{
+   width:500px;
+   padding-left:25px;
+ }
+.forAllCar p{
+color:#D1D1D1;
+
+}
+.AllModels{
+  color:#fff;
+  font-size:20px;
+  width:150px;
+  background-color: blue;
+  border-radius:15px ;
+  text-align:center;
+}
