@@ -1,7 +1,10 @@
 import React,{ Component } from 'react';
 import {connect} from 'react-redux'
 import './store'
+import Header from './components/header'
+import BookCart from './components/BookCart'
 import {SET_BOOKS} from './actions/books'
+
 
 
 class App extends Component {
@@ -20,20 +23,24 @@ class App extends Component {
     const { books } = this.props
         return(
             <div>
-                <ul>
-                    {books.map((book,index)=>{
+                <Header/>
+                <div className={" forbook row col-lg-10 mx-auto"}>
+                    {books.map((mybook,index)=>{
                         return(
-                            <li key={index}>{book.author} - {book.title}</li>
+                            <BookCart {...mybook}/>
                         )
                     })}
-                </ul>
+                </div>
+
+
             </div>
         )
     }
 }
 
 const mapStateToProps= ({books})=>({
-        books:books.items
+        books:books.items,
+        isLoading: books.isLoading
 })
 
 const mapDispatchToProps = dispatch=>({
