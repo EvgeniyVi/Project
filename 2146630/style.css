@@ -1,0 +1,102 @@
+/*.myStyle{
+	background-color: grey;	
+	height:6em;	
+	border:1px solid red;
+	max-width: 	55%;
+	overflow: hidden;
+	word-wrap: break-word;
+}*/
+#Container {
+    margin: 5px 15px 5px 15px;
+    width: 765px;
+}
+#Photo{
+	z-index: 1;
+	position:relative;
+	width: 140px;
+	height: 140px;
+	padding-left: 22px;
+	padding-top:16px;
+}
+#Name{
+	padding-top: 26px;
+	padding-left: 12px;
+}
+#Resume{
+	position:absolute;
+	background-color: #FFFBC8;
+	height: 55px;
+	width: 670px;
+	border:1px solid #CECABF;
+	border-radius:10px;
+	margin-left:-45px;
+	padding-left: 45px;
+}
+
+
+#Statistic_Service{
+width:400px;
+float: right;
+}
+
+#Info_number_service{
+	margin-left:315px;
+}
+#Head_booking_numbers{
+	background: linear-gradient(to right, #B1E19B 80%, transparent 50%);
+	margin-top:5px;
+}
+#Packaget_tours_number{
+	background: linear-gradient(to right, #ACE2F8 50%, transparent 50%);
+	margin-top:5px;
+}
+#Hotel_number{
+	background: linear-gradient(to right, #ACE2F8 30%, transparent 30%);
+	margin-top:5px;
+}
+#Likes_or_dislike{
+    clear: both;
+    padding-top:20px;
+}
+.icon{
+    color:#73B4D5;
+}
+#comment{
+    padding-top: 15px;
+    height: 195px;
+    background-color:#F2F2F2 ;
+    margin-top:25px;
+
+}
+
+#block_call_manager{
+    width: 95%;
+    margin: auto;
+    padding-top: 15px;
+}
+#input_comment{
+    width:100%;
+    resize: none;
+}
+#button_send_comment{
+    display: block;
+    margin:0 auto;
+    background-color: #FDD639;
+    width:400px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+
+
+.block {
+    width:98%;
+	background: #F2FBFF;
+	position: relative;
+    border:2px solid gray;
+	word-wrap: break-word;
+    min-height: 60px;
+    padding:1px 7px 1px 7px;
+
+}
+

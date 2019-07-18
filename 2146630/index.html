@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css	">
+</head>
+<body>
+
+<div id="Container">
+	<div id="Header">
+		<div id="Photo_and_profile" class="row" >
+			<img src="images/Photo_profile.png" id="Photo" alt="Photo_profile">
+			<div id="Name">
+				<div>Вероника Ростова<br/>
+					Менеджер по продажам
+				</div>
+				<div id="Resume" >
+					Подберу для вас самые лучшие предложения.Мои услуги абсолюно бесплатны
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="Statistic_Service">
+
+			<p id="Info_number_service">Услуг</p>
+			<hr/>
+			<div class="container-fluid">
+				<div class="Head_booking row">
+					<div class="col-lg-9" id="Head_booking_numbers">Ручное бронирование</div>
+					<div class="col-lg-2">11</div>
+				</div>
+				<div class="Package_Tours row">
+					<div class=" col-lg-9" id="Packaget_tours_number">Пакетные туры</div>
+					<div class="col-lg-2">3</div>
+				</div>
+				<div class="Hotel row">
+					<div class=" col-lg-9" id="Hotel_number">Отели</div>
+					<div class="col-lg-2">1</div>
+				</div>
+				<hr/>
+				<div class="row">
+					<p class=" col-lg-9">Всего</p>
+					<p class="col-lg-2">15</p>
+				</div>
+			</div>
+
+	</div>
+	<div class="container-fluid" id="Likes_or_dislike" >
+		<div class="row">
+			<p class="col-lg-3"><b>Последние отзывы</b></p>
+			<p class="col-lg-7"><a href="#">Все отзывы</a></p>
+			<p class="icon col-lg-1"><i class="fa fa-heart"></i></p>
+			<p><i class="icon fa fa-comments"></i></p>
+		</div>
+		<div id="result">
+
+		</div>
+	</div>
+		<div id="comment">
+			<div id="block_call_manager">
+				<textarea type="text" id="input_comment" cols="104"  onkeydown="SendOnKey(event)" rows="3" placeholder="Введите сообщение..."></textarea>
+				<button id="button_send_comment">Написать консультанту</button>
+			</div>
+		</div>
+</div>
+
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
+
+
