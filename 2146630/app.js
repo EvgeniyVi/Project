@@ -13,15 +13,15 @@ button.onclick=function() { //Вешаем обработчик на нажат�
 
 		var time = document.createElement('time')
 		result.appendChild(time)
-		time.innerHTML = (Date());;
+		time.innerHTML = (Date());
 
-		var comment = document.createElement('div')//создание тега в котором будут находиться комментарии
-		comment.setAttribute("class", "block" );//добавляем класс
-		result.appendChild(comment)//закидываем тек с коментарием в блок
-		comment.innerHTML = input.value//Добавляем текст
+
+		var comment_user = document.createElement('div')//создание тега в котором будут находиться комментарии
+		comment_user.setAttribute("class", "block" );//добавляем класс
+
+		result.appendChild(comment_user)//закидываем тек с коментарием в блок
+		comment_user.innerHTML = input.value//Добавляем текст
 		input.value = null;
-
-
 	}
 
 }
@@ -29,10 +29,10 @@ button.onclick=function() { //Вешаем обработчик на нажат�
 function SendOnKey(e) {
 	e = e||window.event;
 	if ( e.keyCode == 13 && e.ctrlKey && input.value !="") {
-		var comment = document.createElement('p')
-		comment.setAttribute("class", "block" );
+		var comment_user = document.createElement('p')
+		comment_user.setAttribute("class", "block" );
 		result.appendChild(comment)
-		comment.innerHTML = input.value
+		comment_user.innerHTML = input.value
 		input.value = null;
         }
 }
