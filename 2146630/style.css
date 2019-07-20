@@ -1,61 +1,52 @@
-/*.myStyle{
-	background-color: grey;	
-	height:6em;	
-	border:1px solid red;
-	max-width: 	55%;
-	overflow: hidden;
-	word-wrap: break-word;
-}*/
-
 #Container {
     margin:0 auto;
     padding:0 auto;
-    border:1px solid yellow;
+    width:57%;
 }
 #Photo{
-	z-index: 1;
-	position:relative;
-	width: 140px;
-	height: 140px;
+    z-index: 1;
+    position:relative;
+    width: 140px;
+    height: 140px;
     padding-left: 22px;
-	padding-top:16px;
+    padding-top:16px;
+    margin-top:16px;
 }
 #Name{
-	padding-top: 26px;
-	padding-left: 12px;
+    padding-top: 26px;
+    padding-left: 12px;
 }
 #Resume{
-	position:absolute;
-	background-color: #FFFBC8;
-	height: 55px;
-	width: 670px;
-	border:1px solid #CECABF;
-	border-radius:10px;
-	margin-left:-45px;
-	padding-left: 45px;
+    position:absolute;
+    background-color: #FFFBC8;
+    height: 55px;
+    width: 100%;
+    border:1px solid #CECABF;
+    border-radius:10px;
+    margin-left:-60px;
+    padding-left: 60px;
     min-height: 70px;
 }
-
-
 #Statistic_Service{
-width:400px;
-float: right;
+    width:100%;
+    float: right;
 }
 
 #Info_number_service{
-	margin-left:360px;
+    margin-left:76%;
+    padding-top:5px;
 }
 #Head_booking_numbers{
-	background: linear-gradient(to right, #B1E19B 80%, transparent 50%);
-	margin-top:5px;
+    background: linear-gradient(to right, #B1E19B 80%, transparent 50%);
+    margin-top:5px;
 }
 #Packaget_tours_number{
-	background: linear-gradient(to right, #ACE2F8 50%, transparent 50%);
-	margin-top:5px;
+    background: linear-gradient(to right, #ACE2F8 50%, transparent 50%);
+    margin-top:5px;
 }
 #Hotel_number{
-	background: linear-gradient(to right, #ACE2F8 30%, transparent 30%);
-	margin-top:5px;
+    background: linear-gradient(to right, #ACE2F8 30%, transparent 30%);
+    margin-top:5px;
 }
 #Likes_or_dislike{
     clear: both;
@@ -69,11 +60,10 @@ float: right;
     height: 195px;
     background-color:#F2F2F2 ;
     margin-top:25px;
-
+    width: 100%;
 }
 
 #block_call_manager{
-    width: 95%;
     margin: auto;
     padding-top: 15px;
 }
@@ -90,67 +80,85 @@ float: right;
     border-radius: 30px;
 }
 
-
-
 .block {
-	background: #F2FBFF;
-	position: relative;
+    background: #F2FBFF;
+    position: relative;
     border:2px solid gray;
-	word-wrap: break-word;
+    word-wrap: break-word;
     min-height: 60px;
     padding:1px 7px 1px 7px;
-
+    margin-top:15px;
+}
+@media (max-width: 992px) {
+    #Container{
+        width: 100%;
+    }
+    #Statistic_Service{
+        width:75%;
+        float: right;
+    }
+    #Info_number_service{
+        margin-left:85%;
+        padding-top:5px;
+    }
 }
 
-@media screen and (min-width: 700px) {
-
-
+@media (max-width: 768px) {
+    #Container{
+        width: 100%;
+    }
 }
 @media (max-width: 576px) {
-    #Container {
-        width:100%;
-        margin: 0 auto;
-        padding: 0 auto;
+    #Container{
+        width: 100%;
+    }
 }
+@media (max-width: 360px) {
+    #Container{
+        border:1px solid red;
+        width:100%;
+    }
+    #button_send_comment{
+        width:100%;
+    }
+    #Resume{
+        margin: 0 auto;
+        width: 500px;
+        padding-left:0;
+        height:100px;
+    }
+    #Photo{
+        margin:0 auto;
+    }
+    #Name{
+        padding-top: 26px;
+        text-align: center;
+        margin: 0 auto;
+    }
     #Statistic_Service{
+        padding-top:100px;
+        float: left;
+        width:100%;
+    }
+    #Info_number_service{
+        margin-left:76%;
+        padding-top:5px;
+
+    }
+    #Head_booking_numbers{
+        background: linear-gradient(to right, #B1E19B 80%, transparent 50%);
+        margin-top:5px;
         width:400px;
-        margin-top:15px;
     }
-    #Info_number_service{
-        margin-left:350px;
+    #Packaget_tours_number{
+        background: linear-gradient(to right, #ACE2F8 50%, transparent 50%);
+        margin-top:5px;
+    }
+    #Hotel_number{
+        background: linear-gradient(to right, #ACE2F8 30%, transparent 30%);
+        margin-top:5px;
+
     }
 
-}
-@media (min-width: 768px) {
-    #Container {
-        width:100%;
-        margin: 0 auto;
-        padding: 0 auto;
-    }
-    #Statistic_Service{
-        width:360px;
-        border: 1px solid red;
-        margin-top:15px;
-    }
-    #Info_number_service{
-        margin-left:300px;
-    }
 
-}
-@media (min-width: 992px) {
-    #Container {
-        width:100%;
-        margin: 0 auto;
-        padding: 0 auto;
-    }
-    #Statistic_Service{
-        width:400px;
-        border: 1px solid green;
-        margin-top:15px;
-    }
-    #Info_number_service{
-        margin-left:300px;
-    }
-
-}
 
