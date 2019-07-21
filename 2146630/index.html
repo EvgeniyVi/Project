@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<div id="Container" class="col-lg-9 col-md-12 col-sm-12">
+<div id="Container" class="col-lg-9 col-md-12 col-sm-12 col-11">
         <div id="Header">
             <div id="Photo_and_profile" class="row" >
                 <img src="images/Photo_profile.png" id="Photo" alt="Photo_profile">
@@ -20,20 +20,20 @@
                     <div><b>Вероника Ростова</b><br/>
                         Менеджер по продажам
                     </div>
-                    <div id="Resume" class="col-lg-10 col-md-10 col-sm-10 col-9" >
+                    <div id="Resume" class="col-lg-10 col-md-10 col-sm-10 col-10" >
                         Подберу для вас самые лучшие предложения.
                         Мои услуги абсолюно бесплатны
                     </div>
                 </div>
             </div>
         </div>
-        <div id="Statistic_Service"  class="col-lg-9 col-md-8 col-sm-12 col-9">
+        <div id="Statistic_Service"  class="col-lg-9 col-md-8 col-sm-12 col-12">
             <p id="Info_number_service">Услуг</p>
             <hr/>
-            <div class="container-fluid " >
-                <div class="Head_booking row">
+            <div class=" container-fluid" >
+                <div class="Head_booking  row">
                     <div class=" col-lg-9 col-md-10 col-sm-10 col-10" id="Head_booking_numbers">Ручное бронирование</div>
-                    <div class="col-lg-1 com-md-2 col-sm-2 col-2">11</div>
+                    <div class="number col-lg-1 com-md-2 col-sm-2 col-2">11</div>
                 </div>
                 <div class="Package_Tours row">
                     <div class=" col-lg-9 col-md-10 col-sm-10 col-10" id="Packaget_tours_number">Пакетные туры</div>
@@ -50,32 +50,36 @@
                 </div>
             </div>
         </div>
-        <div  id="Likes_or_dislike"  >
-            <div class="container-fluid row">
-                <p class="last_comments col-lg-4 col-md-4 col-sm-4 col-4 "><b>Последние отзывы</b></p>
-                <p class=" col-lg-5 col-md-5 col-sm-5 col-5"><a href="#" class="all_comments"></a></p>
+        <div  id="LastComments_or_NewComments"  >
+            <div class="container-fluid  row">
+                <p class="last_comments col-lg-4 col-md-4 col-sm-4 col-5 "><b>Последние отзывы</b></p>
+                <p class=" col-lg-5 col-md-5 col-sm-5 col-4"><a href="#" class="all_comments"></a></p>
                 <p class="icon col-lg-2 col-md-2 col-sm-2 col-2 "><i class="fa fa-heart"></i></p>
                 <p><i class="icon fa fa-comments "></i></p>
             </div>
-            <div  class="col-lg-12 col-md-12 col-sm-12 col-12">
+        </div>
+            <div  class="Block_show_comment col-md-12 col-sm-12 col-12">
                 <div id="result">
 
                 </div>
-
-                <p>Самуил <time>13 октября 2011 </time></p>
-                <div class="block">
-                    Привет Верунь!ничего себе классная фотка
-                </div>
-                <div>
-                    <p>Лилия Семеновна <time>13 октября 2011 </time></p>
-                    <div class="block">
-                        Вероника зраствуйте.Есть такой вопрос.Особый вид куниц жизненно стабилизирует кинетический момент,
-                        это и есть всемирно известный центр огранки алмазов и торговли брилиантами?
+                <div class="block_new_comments">
+                    <p><time> Самуил 13 октября 2011 </time></p>
+                    <div class="text_comments">
+                        Привет Верунь!ничего себе классная фотка
+                    </div>
+                    <div class="block_new_comments">
+                        <div>
+                            <p><time> Лилия Семеновна 13 октября 2011 </time></p>
+                            <div class="text_comments">
+                                Вероника зраствуйте.Есть такой вопрос.Особый вид куниц жизненно стабилизирует кинетический момент,
+                                это и есть всемирно известный центр огранки алмазов и торговли брилиантами?
+                            </div>
                     </div>
                 </div>
+                </div>
             </div>
-        </div>
-        <div id="comment" class="col-lg-12 col-md-12 col-sm-12 col-12">
+
+        <div id="Add_comment" class="col-lg-12 col-md-12 col-sm-12 col-12">
             <div id="block_call_manager" >
                 <textarea type="text" id="input_comment" cols="104"  onkeydown="SendOnKey(event)" rows="3" placeholder="Введите сообщение..."></textarea>
                 <button id="button_send_comment">Написать консультанту</button>

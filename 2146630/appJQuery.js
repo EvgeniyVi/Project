@@ -1,44 +1,5 @@
 $( document ).ready(function() {
-
-/*
-$("#button_send_comment").click(function () {
-  if($('#input_comment').val() !=""){
-      $('<div/>',{
-        "class":'block',
-      }).appendTo('#result')
-    $('.block').html($('#input_comment').val())
-  }
-})
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  var comments = 5; // - количество отображаемых коментариев
+  var comments = 3; // - количество отображаемых коментариев
   hidecomments= "Вернуться к последним отзывам  ";
   showcomments = "Все отзывы";
 
@@ -46,14 +7,14 @@ $("#button_send_comment").click(function () {
 
   $(".all_comments").click(function (e){
     e.preventDefault();
-    if( $(".block:eq("+comments+")").is(":hidden") )
+    if( $(".block_new_comments:eq("+comments+")").is(":hidden") )
     {
-      $(".block").show();
+      $(".block_new_comments").show();
       $(".all_comments").html( hidecomments );
     }
     else
     {
-      $(".block:not(:lt("+comments+"))").hide();
+      $(".block_new_comments:not(:lt("+comments+"))").hide();
       $(".all_comments").html( showcomments );
     }
   });

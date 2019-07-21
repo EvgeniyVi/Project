@@ -48,14 +48,14 @@
     background: linear-gradient(to right, #ACE2F8 30%, transparent 30%);
     margin-top:5px;
 }
-#Likes_or_dislike{
+#LastComments_or_NewComments{
     clear: both;
     padding-top:20px;
 }
 .icon{
     color:#73B4D5;
 }
-#comment{
+#Add_comment{
     padding-top: 15px;
     height: 195px;
     background-color:#F2F2F2 ;
@@ -65,7 +65,8 @@
 
 #block_call_manager{
     margin: auto;
-    padding-top: 15px;
+    padding-top: 15px
+
 }
 #input_comment{
     width:100%;
@@ -80,7 +81,7 @@
     border-radius: 30px;
 }
 
-.block {
+.text_comments{
     background: #F2FBFF;
     position: relative;
     border:2px solid gray;
@@ -89,6 +90,7 @@
     padding:1px 7px 1px 7px;
     margin-top:15px;
 }
+
 @media (max-width: 992px) {
     #Container{
         width: 100%;
@@ -104,61 +106,89 @@
 }
 
 @media (max-width: 768px) {
-    #Container{
+    #Container {
         width: 100%;
     }
 }
 @media (max-width: 576px) {
     #Container{
         width: 100%;
+        font-size:14px;
     }
-}
-@media (max-width: 360px) {
-    #Container{
-        border:1px solid red;
-        width:100%;
+    #Resume{
+        height:5em;
+    }
+    #Photo{
+        width:105px;
+        height: 120px;
+        padding-top:25px;
+        padding-left: 15px;
     }
     #button_send_comment{
         width:100%;
     }
-    #Resume{
-        margin: 0 auto;
-        width: 500px;
-        padding-left:0;
-        height:100px;
+}
+
+
+@media (max-width: 360px) {
+    #Container {
+        width: 100%;
+        font-size:12px;
     }
+
+    #button_send_comment {
+        width: 100%;
+    }
+
     #Photo{
-        margin:0 auto;
+        width: 90px;
+        height: 120px;
+        padding-left:0;
+        padding-top:25px;
     }
-    #Name{
-        padding-top: 26px;
+    #Resume {
+        position:absolute;
+        background-color: #FFFBC8;
+        height: 70px;
+        width: 100%;
+        border:1px solid #CECABF;
+        border-radius:10px;
+        margin-left:-60px;
+        padding-left: 60px;
+        text-align: left;
+    }
+    #Name {
         text-align: center;
-        margin: 0 auto;
     }
-    #Statistic_Service{
-        padding-top:100px;
-        float: left;
+
+    #Statistic_Service {
+       margin-top: 15px;
         width:100%;
     }
-    #Info_number_service{
-        margin-left:76%;
-        padding-top:5px;
 
-    }
-    #Head_booking_numbers{
-        background: linear-gradient(to right, #B1E19B 80%, transparent 50%);
-        margin-top:5px;
-        width:400px;
-    }
-    #Packaget_tours_number{
-        background: linear-gradient(to right, #ACE2F8 50%, transparent 50%);
-        margin-top:5px;
-    }
-    #Hotel_number{
-        background: linear-gradient(to right, #ACE2F8 30%, transparent 30%);
-        margin-top:5px;
-
+    #Info_number_service {
+        margin-left: 90%;
+        padding-top: 5px;
     }
 
+    #Head_booking_numbers {
+        background: linear-gradient(to right, #B1E19B 100%, transparent 50%);
+        margin-top: 5px;
+        border:1px solid yellow;
+    }
+
+    #Packaget_tours_number {
+        background: linear-gradient(to right, #ACE2F8 100%, transparent 50%);
+        margin-top: 5px;
+    }
+
+
+    #Hotel_number {
+        background: linear-gradient(to right, #ACE2F8 100%, transparent 30%);
+        margin-top: 5px;
+
+
+    }
+}
 
 
