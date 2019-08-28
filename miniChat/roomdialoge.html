@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Chat programs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src = "/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal">Чат</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="#">Features</a>
+        <a class="p-2 text-dark" href="#">Enterprise</a>
+        <a class="p-2 text-dark" href="#">Support</a>
+        <a class="p-2 text-dark" href="#">Pricing</a>
+    </nav>
+    <a class="btn btn-outline-primary" href="#">Sign up</a>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <h3>Форма сообщений</h3>
+        <form id="messForm">
+            <label for="name">Введите Ваше имя</label>
+            <br/>
+            <input type="name" id="name" placeholder="Введите имя">
+            <br/>
+            <label for="message">Сообщение</label>
+            <i id="typing"></i>
+            <textarea name="message" id="message" class="form-control" placeholder="Enter message"></textarea>
+            <br>
+            <input type="submit"   value="Send" class="btn btn-danger"  id="button"></input>
+        </form>
+    </div>
+    <div class="col-lg-6">
+        <h3>Сообщения</h3>
+        <div id="all_message"></div>
+    </div>
+</div>
+<script>
+    $(function() {
+        let socket = io.connect();
+        let $form = $("#messForm")
+        let $name = $("#name")
+        let $textarea = $("#message")
+        let $all_message = $("#all_message")
+
+        $form.submit ((event)=>{
+            event.preventDefault();
+            socket.emit('send mess', {message: $textarea.val(),name: $name.val()});
+            $textarea.val('');
+        })
+            socket.on('add mess',(data)=>{
+            $all_message.append("<div><b>"+ data.name + " </b>: " + data.message +  "</div>")
+        });
+
+            fetch("/Chats")
+                .then(data=>{
+                    return data.json();
+                })
+                .then(json=>{
+                    json.map(data=>{
+                            $all_message.append("<div><b>"+ data.name + " </b>: " + data.message +  "</div>")
+
+                    });
+                });
+
+
+    });
+
+</script>
+</body>
+</html>
+
+
