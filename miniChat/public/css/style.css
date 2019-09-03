@@ -1,0 +1,17 @@
+
+#all_message{
+    height: 350px;
+    margin: auto;
+    overflow-y: scroll;
+    word-wrap: break-word;
+    padding:10px 7px 10px 7px;
+}
+.block-registration{
+    display: none;
+}
+.header{
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKPY0o55fRb_AsrYzfb1VnmPVYttvrCYKARyeObbDaCUVGUqYx")
+}
+.successful_or_error{
+    background-color:#F57508;
+}
