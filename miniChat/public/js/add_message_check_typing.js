@@ -16,7 +16,7 @@ $(function() {
         return false;
     })
     socket.on('add mess', (data) => {
-        $all_message.append("<div><b>" + data.name + " </b>: " + data.message + "</div>")
+        $all_message.append("<div><b>" + data.name + " </b>: " + data.message +  "</div>")
     });
 
 

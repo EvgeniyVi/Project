@@ -8,14 +8,14 @@ const models = require('../models')
 //POST authorized
 
 router.post('/register',(req,res)=>{
-    const login = req.body.Login;
-    const password = req.body.Password;
+    const login = req.body.login;
+    const password = req.body.password;
     const ConfirmPassword = req.body.ConfirmPassword;
 
     if (!login || !password || !ConfirmPassword) {
         res.json({
             ok: false,
-            error: 'Все поля должны быть заполнены!',
+            error: '*Все поля должны быть заполнены!',
             fields: ['login', 'password', 'ConfirmPassword']
         });
     } else if (login.length < 3 || login.length > 16) {
@@ -50,6 +50,50 @@ router.post('/register',(req,res)=>{
         })
     }
 
+})
+
+
+//Post sign in
+router.post('/login',(req,res)=> {
+    const login = req.body.login;
+    const password = req.body.password;
+    if (!login || !password) {
+        res.json({
+            ok: false,
+            error: '*Заполните поля для входа',
+            fields: ['login', 'password']
+        });
+    }else{
+        models.User.findOne({
+            login
+        }).then(user=>{
+            if(!user) {
+                res.json({
+                    ok: false,
+                    error: "Неверный логин или пароль",
+                    fields: ['login', 'password']
+                })
+            } else{
+                    bcrypt.compare(password,user.password,(err,result)=>{
+                       if(!result){
+                           res.json({
+                               ok: false,
+                               error: "Неверный логин или пароль",
+                               fields: ['login', 'password']
+                           })
+                       }else{
+                           ///
+                       }
+                    })
+                }
+        }).catch(err => {
+                console.log(err)
+                res.json({
+                    ok: false,
+                    error: 'Ошибка'
+                });
+            })
+    }
 })
 
 module.exports = router;

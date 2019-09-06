@@ -1,4 +1,7 @@
+//Схема сохранения данных в базе
+
 const mongoose = require("mongoose");
+mongoose.set('useCreateIndex', true);
 const Schema = mongoose.Schema;
 const chatSchema = new Schema(
     {

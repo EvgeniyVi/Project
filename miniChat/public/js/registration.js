@@ -1,24 +1,69 @@
- $(".registration").click( ()=> {
-        $(".block-registration").toggle();
+
+$(".registration").click( ()=> {
+        $(".modal").show();
     });
 
-$(".register-button").on('click',(e)=>{
+$(".close").click(()=>{
+    $(".modal").hide();
+})
+
+$(".register-button").on('click',(e)=> {
     e.preventDefault();
-    var data = {
-        Login:$(".register_email").val(),
-        Password:$(".register_password").val(),
-        ConfirmPassword:$(".confirm_register_password").val()
+   let data = {
+        login: $(".register_email").val(),
+        password: $(".register_password").val(),
+        ConfirmPassword: $(".confirm_register_password").val()
     }
     $.ajax({
-        type:'POST',
-        data:JSON.stringify(data),
-        contentType:'application/json',
-        url:'/api/auth/register'
-    }).done((data)=>{
-        if(!data.ok){
-            $(".successful_or_error").text(data.error)
-        }else{
+        type: 'POST',
+        data: JSON.stringify(data),
+        contentType: 'application/json',
+        url: '/api/auth/register'
+    }).done((data) => {
+        if (!data.ok) {
+            $(".successful_or_error").text(data.error);
+            if (data.fields) {
+                data.fields.forEach((item) => {
+                    $('input[name = ' + item + ']').addClass('error')
+                })
+            }
+        } else {
             $(".successful_or_error").text("Вы успешно зарегистровались!Пожалуйста войдите в свой аккаунт")
+            $(".modal").delay(1000).fadeOut(900)
         }
     })
 })
+
+$(".sign_in").on('click', (e) => {
+    e.preventDefault();
+    let data = {
+        login: $(".login_input").val(),
+        password: $(".password_input").val()
+    }
+    $.ajax({
+        type: 'POST',
+        data: JSON.stringify(data),
+        contentType: 'application/json',
+        url: '/api/auth/login'
+    }).done((data) => {
+        if (!data.ok) {
+            $(".login").text(data.error);
+        } else {
+            $(".login").text("Вы успешно зарегистровались!Пожалуйста войдите в свой аккаунт")
+        }
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
