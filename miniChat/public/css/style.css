@@ -1,5 +1,5 @@
 body{
-    background-image: url("https://bit.ua/wp-content/uploads/2017/12/5a258ab23339b025218b45c0-960-720.png");
+/*    background-image: url("https://bit.ua/wp-content/uploads/2017/12/5a258ab23339b025218b45c0-960-720.png");*/
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -9,6 +9,9 @@ body{
     overflow-y: scroll;
     word-wrap: break-word;
     padding:10px 7px 10px 7px;
+}
+.send{
+    background-color: red;
 }
 .header{
     background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKPY0o55fRb_AsrYzfb1VnmPVYttvrCYKARyeObbDaCUVGUqYx")
@@ -43,8 +46,9 @@ body{
     cursor:pointer;
 }
 
-
-
+#name{
+    display:none;
+}
 /*
 modal window*/
 .modal {

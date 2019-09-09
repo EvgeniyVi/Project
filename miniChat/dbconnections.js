@@ -1,7 +1,8 @@
 const mongoose = require("mongoose")
+const config = require("./config")
 mongoose.Promise = require("bluebird")
-const url = "mongodb://localhost:27017/chat";
-const connect = mongoose.connect(url,{useNewUrlParser:true});
+const connect = mongoose.connect(config.MONGO_URL,{useNewUrlParser:true});
+
 
 
 module.exports = connect;

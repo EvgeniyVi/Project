@@ -1,6 +1,7 @@
 const express = require('express')
 const session= require('express-session');
 const MongoStore = require('connect-mongo')(session)
+const app = express();
 const serve = require('http').createServer(app);
 const io = require('socket.io').listen(serve);
 const connect = require("./dbconnections");
@@ -8,8 +9,11 @@ const chat = require("./models/ChatSchema");
 const router = require("./routes/Find_to_base");
 const bodyParser = require("body-parser");
 const routes = require('./routes')
+const config = require("./config")
+const mongoose = require("mongoose")
 
-const app = express();
+
+
 
 //session
 
@@ -19,6 +23,8 @@ app.use(
         resave: true,
         saveUninitialized: false,
         store: new MongoStore({
+            mongooseConnection: mongoose.connection
+        })
     })
 )
 
@@ -38,7 +44,14 @@ app.get('/', (req,res)=>{
    res.sendFile(__dirname + "/public/Welcome_page.html")
 })
 app.get('/Dialog_Room',(req,res)=>{
-    res.sendFile(__dirname + "/public/Dialog_Room.html")
+    const id = req.session.userId;
+    const login = req.session.userLogin;
+    res.render(__dirname + "/public/Dialog_Room.ejs",{
+        user:{
+            id,
+            login
+        }
+    })
 })
 app.use('/api/auth', routes.auth )
 

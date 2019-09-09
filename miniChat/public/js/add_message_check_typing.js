@@ -7,6 +7,7 @@ let $typing = $("#typing");
 let $messageInput = $("#message")
 
 
+
 //add message in list
 $(function() {
     $form.submit((event) => {
@@ -48,4 +49,5 @@ $messageInput.bind("keyup",()=>{
 socket.on("notifyStopTyping",()=>{
     $typing.text("")
 })
+
 

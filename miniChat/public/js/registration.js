@@ -24,7 +24,7 @@ $(".register-button").on('click',(e)=> {
             $(".successful_or_error").text(data.error);
             if (data.fields) {
                 data.fields.forEach((item) => {
-                    $('input[name = ' + item + ']').addClass('error')
+                    $('input[names = '+ item +']').addClass('error')
                 })
             }
         } else {
@@ -49,9 +49,10 @@ $(".sign_in").on('click', (e) => {
         if (!data.ok) {
             $(".login").text(data.error);
         } else {
-            $(".login").text("Вы успешно зарегистровались!Пожалуйста войдите в свой аккаунт")
+           $(location).attr('href','/Dialog_Room')
         }
     })
+
 })
 
 
