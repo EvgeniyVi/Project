@@ -1,0 +1,27 @@
+body{
+  background-image: URL(https://st3.depositphotos.com/10953546/14866/v/450/depositphotos_148660113-stock-illustration-technology-social-media-network-link.jpg)
+}
+input,button{
+  width:100%;
+  font-size:1.5em;
+  border-radius: 15px;
+}
+#chat i{
+  float:right;
+  width:50%;
+  color:blue;
+}
+#chat b{
+  color: #ffffff;
+  font-size: 20px;
+  padding:45px;
+  margin-top: 45%;
+  font-style: italic;
+
+}
+ p>div{
+  border:1px solid black;
+  border-radius: 25px;
+  background-color: gray;
+}
+ 

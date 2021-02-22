@@ -1,0 +1,92 @@
+body{
+/*    background-image: url("https://bit.ua/wp-content/uploads/2017/12/5a258ab23339b025218b45c0-960-720.png");*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#all_message{
+    height: 350px;
+    margin: auto;
+    overflow-y: scroll;
+    word-wrap: break-word;
+    padding:10px 7px 10px 7px;
+}
+.send{
+    background-color: red;
+}
+.header{
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKPY0o55fRb_AsrYzfb1VnmPVYttvrCYKARyeObbDaCUVGUqYx")
+}
+.successful_or_error{
+/*    background-color:#F57508;*/
+    width: 70%;
+}
+.error{
+   background-color:red;
+}
+#sign_up{
+    background-color: white;
+    width:25%;
+    height: 400px;
+    float: right;
+    margin-right: 10%;
+    margin-top:10%;
+    border-radius: 15px;
+}
+#logo{
+   display: block;
+    margin: auto;;
+}
+
+.auth {
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+.registration:hover{
+    cursor:pointer;
+}
+
+#name{
+    display:none;
+}
+/*
+modal window*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+
+/* Modal Content/Box */
+.block-registration {
+    background-color: #fefefe;
+    margin-left: 15% ;
+    margin-top:10%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+    border-radius: 15px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

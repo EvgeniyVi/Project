@@ -1,0 +1,130 @@
+ body, html{
+     background-color: #FFFFFF;
+     font-family: 'Lato', sans-serif;
+     margin: 0;
+    background-color: #E5E5E5;
+    padding-bottom: 20px;
+  }
+
+.Header{/*стиль для блока заголовка*/
+     height: 100px;
+     padding: 20px;
+     width: 100%;
+     background-image:URL(https://planetofhotels.com/blog/wp-content/uploads/Plyazh-Gdan%60sk.jpg);
+     background-size: 100%;
+     margin:auto;
+
+}
+.logo{/*стиль для блока логотипа*/
+  display: flex;
+}
+.logo h2{/*стиль для блока логотипа(текст)*/
+  padding-top: 10px;
+}
+.Navbar{/*стиль для навигации*/
+  display: flex;
+  padding-top: 15px;
+}
+.NavBarText{/*стиль для текста навигации*/
+  color:black;
+}
+.menu li{/*стиль для линков в навигации*/
+  display: inline;
+  padding:5px;
+  padding-left: 25px;
+}
+.menu{/*стиль для ул в навигации*/
+  padding-top:5px;
+}
+.StyleLineChangeCountries{/*стиль для блоков которые находятся в полосе*/
+  display: flex;
+  justify-content: space-around;
+  background-color:#004E8C;
+  color:#fff;
+  margin: auto;
+
+}
+.CountryClick:hover{/*стиль для блоков в полосе при наведении*/
+  text-decoration:underline;
+  cursor: pointer;
+}
+.CountryClick{/*стиль для блоков при нажатии*/
+  padding-top: 10px;
+}
+
+.CountryStyle{/*див который содержит в себе выпадающие страны*/
+  position: fixed;
+  background-color:#4E5284;
+  width:120px; 
+
+
+}
+.Countries {/*стиль для выпадающих стран Европы*/
+    width: 120px;  
+    display: flex;
+    justify-content: flex-start;
+}
+.NewZeland {/*стиль для выпадающих стран Европы*/
+    width: 200px;  
+    display: flex;
+    justify-content: flex-start;
+}
+.NorthAmericaCountries{/*Стиль для выпадающих стран Америки*/
+     margin-top:20px;
+    width: 150px;
+    text-align: center; 
+}
+
+.StyleForLinkEuropaCountries:hover{/*стиль при наведении для стран */
+  color:#fff;
+}
+.StyleForLinkEuropaCountries{/*стиль для стран*/
+  color:#fff;
+  float:left;
+}
+.ImgCountriesEurope{/*стиль для ширины между картинкой и текстом*/
+  padding:5px;
+}
+
+.HeadComponent p{/*стиль для текста в компоненте страны*/
+  text-align: center;
+}
+
+.ContentComponent p{/*Стиль для текста что в блоке */
+  text-align: justify;
+}
+.wrapper{/*Обертка для уменьшения ширины*/
+  width: 1024px;
+  margin:auto;
+  background-color: #fff;
+}
+.InsideWrapper{/*Внутренняя оберта для отступов от краев*/
+  width: 972px;
+  margin: auto;
+}
+.InputForSearch{/*поле поиска */
+  margin-left: 20px;
+}
+
+.EuropaCatalogCountries  p{
+  margin:auto;
+ }
+
+.EnglandDania{
+  border:1px solid;
+  padding-left: 5px;
+}
+.BeautifulPlacesWorld{
+  margin:auto;
+}
+
+.imgTravel{
+  float: left;
+  margin:7px 7px 7px ;
+}
+.BlockHome{
+  text-align: justify;
+}
+.DivBlockHome{
+  padding-top: 15px;
+}
