@@ -1,0 +1,45 @@
+
+body {
+	background-image: url(image/bg_1.jpg) ;
+	background-size:cover;
+	
+ }
+
+.a_image {
+	text-align: center;
+}
+
+.a_button {
+	text-align: center;
+	padding-top: 100px;
+	padding-bottom: 10px;
+}
+.b_button {
+	text-align: center;
+}
+.all_button {
+
+}
+a {
+	text-decoration: none;
+	font-size: 20px;
+
+}
+button {
+	padding-right: 15px;
+	padding-right: 15px;
+}
+.but_1 {
+
+	border-radius: 10px;
+	font-family: monospace;
+}
+.but_2 {
+	border-radius: 10px;
+	font-family: monospace;
+}
+.contact {
+	text-align:center;
+	text-decoration:none;
+	padding-top:100px;
+}
