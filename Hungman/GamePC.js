@@ -1,85 +1,85 @@
 
 window.onload=function () {
 
-    let div = document.getElementById("ok_word");
-    let count_letter = document.getElementById("count_letter");
-    let start = document.getElementById('start');
-    let win_or_lose = document.getElementById("commentComputer");
-    let attempted = document.getElementById("attempted");
+    let count_letter = id("count_letter");
+    let start = id('start');
+    let win_or_lose = id("commentComputer");
+    let attempted = id("attempted");
     let words = ["лошадь", "удав", "кровать", "телевизор", "сервис", "командир", "бамбук", "клоун", "инквизитор", "балабол", "клад", "загадка", "танк"];
-    let lives = " ";
-    var newRemainingLetters = " ";
-    var remainigLetters = " ";
-    var answerArray = [];
+    let lives = 7;
+    let newRemainingLetters = " ";
+    let remainigLetters = " ";
+    let curr_word = null; // Текущее слово (строка)
+    let guessed_letters = null; // Массив угаданных букв
+    
+
+
+let output = id("ok_word");
+
+
+
+
+/***/
+id("start").addEventListener("click", function () {
   
+  curr_word = get_random_word();
+  guessed_letters = new Array(curr_word.length);
 
+  //указываем количество букв
+  remainigLetters = curr_word.length;//количество букв
+  newRemainingLetters = remainigLetters;// количество букв которое остлось угадать
+  count_letter.innerText = "Осталось" + " " + remainigLetters + " " +  "из" +" " +  newRemainingLetters;
+  //
 
+  attempted.innerText = lives + " жизней ";//количвество оставшихся жизней
+  output.textContent = "";
+  console.log(curr_word);
+});
 
-   
-    start.addEventListener("click", Get_Random_Word);
-
-    function Get_Random_Word() {
-        lives = 7;
-    	  div.innerText = " ";//очищаем поле каждый раз при вызове функции
-    	  count_letter.innerText = " ";
-
-          curr_word_computer = words[Math.floor(Math.random() * words.length)];//рандомное слово
-          console.log(curr_word_computer);
-         answerArray = [];//массив для заполнения прочерками,букв которые неугаданы
-
-        for(let i =0;i<curr_word_computer.length;i++){
-        		answerArray[i] = "_";//создание прочерков,в зависимости от количества букв в рандомном слове
-           }
-
-        remainigLetters = curr_word_computer.length;//узнаем длину слова для того что бы показывать сколько отгадано и сколько осталось
-        newRemainingLetters = remainigLetters;//дополнительная перменная для того что бы считать остаток неугаднных букв
-
-        
-    		attempted.innerText = lives + " жизней ";//количвество оставшихся жизней
-    		div.innerText = answerArray.join(" "); //вывод подчеркивания вместо букв
-    		count_letter.innerText = "Осталось" + " " + remainigLetters + " " + " из " +  newRemainingLetters;//сколько осталось угадать букв
-    }
-
-     
-    input_user.addEventListener("input", compare);
-
-    function compare() {
-       if(!this.value) return;
-       var input = this.value.toLowerCase();
-
-    	
-          if((remainigLetters>0) && (lives!==0)){
-
-          for(let j = 0; j < curr_word_computer.length;j++ ){
-          /*	if(curr_word_computer[j] === input){
-          		answerArray[j] = input;
-              console.log(answerArray[j]);
-              div.innerText += answerArray[j];
-          		remainigLetters--;
-              count_letter.innerText = "Осталось" + " " + remainigLetters + " " + " из " + newRemainingLetters;
-          	}*/
-               if (answerArray[j] === input) {
-                alert("Sorry, this letter is already there... try again :|")
-                break;
-            }
-            // Проверяем угадали ли букву
-            if(curr_word_computer[j] === input){
-            answerArray[j] = input;
-            div.innerText += answerArray[j++];
-            remainigLetters--;
-            
-            }
-          }  
-          }
-       
-       if (remainigLetters === newRemainingLetters) {
-        lives--; 
-        attempted.innerText = lives + "жизней";
-    }
-        newRemainigLetters = remainigLetters;
-        count_letter.innerText = "Осталось" + " " + remainigLetters + " " + " из " + newRemainingLetters;
-        setTimeout(() => this.value = "", 200);
-
-}
+function get_random_word() {
+  return words[Math.random() * words.length | 0];
 }
 
+/***/
+id("input_user").addEventListener("input", function () {
+  if (!this.value) return; // Не ввели букву (например, Backspace)
+  
+  let input = this.value[0].toLowerCase();
+  let result = "";
+ 
+  if(lives !==0 && remainigLetters>0){
+    
+  for (let i = 0; i < curr_word.length; i++) {
+    let letter = curr_word[i];
+
+    if (input === letter) { // Буква совпала?
+      guessed_letters[i] = letter; // Cохранить в массиве угаданных.
+      remainigLetters--;
+    }
+    
+    if (guessed_letters[i]) {
+      // Заодно в том же цикле сразу собирается строка из всех ранее угаданных.
+      result += letter;
+      
+    } else {
+      result += " _ "; // Можно показывать пустые "клетки"
+    }
+  }
+  }
+  count_letter.innerText = "Осталось" + " " + remainigLetters + " " +  "из" +" " +  newRemainingLetters;
+  
+  output.textContent = result;
+
+  if (result === curr_word) {
+    console.log("Угадано");
+  }
+  
+  setTimeout(() => this.value = "", 200);
+  // Пусть удаляется чуть позже, чтобы ощущалось, что ввод сработал.
+});
+
+/***/
+function id(str) {
+  return document.getElementById(str);
+}
+}
