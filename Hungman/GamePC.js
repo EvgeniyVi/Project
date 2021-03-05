@@ -86,9 +86,9 @@ id("input_user").addEventListener("input", function () {
   }
      
         if (lives === 0) {
-          win_or_lose.innerText=`Ooooohh, noooo! Your lives are over :( The hidden word was: ${curr_word}`;
+          win_or_lose.innerText=`У Вас закончились жизни,было загадано слово: ${curr_word}`;
         } else if(remainigLetters === 0){
-          win_or_lose.innerText = `Yeeeeeahhh, great!!! The hidden word was: ${curr_word}`;
+          win_or_lose.innerText = `Да,Вы угадали слово :  ${curr_word}`;
         } 
 
       output.textContent = result;
