@@ -7,18 +7,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src = "GamePC.js"></script>
+    <link rel="stylesheet" type="text/css" href="style_game_with_pc.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 <body>
-   <p id="commentComputer"></p>
-   <p id="repeat_word"></p>
-    <button id="start">Начинаем игру</button>
-    </br>
-    <input type="text" id = "input_user">
-   <div id="ok_word"></div>
-   <div id="attempted"></div>
-   <div id="count_letter"></div>
-   <canvas id="canvas" width=500 height=500></canvas>
+    <div class="main_block">
+        <div>
+            
+             <button id="start">Начинаем игру</button>
+             </br>
+             <input type="text" id = "input_user">
+        </div>
+
+        <div id="info">
+            <p id="repeat_word"></p>
+            <p id="commentComputer"></p>
+            <div id="attempted"></div>
+               
+        </div>
+        
+        <div>
+        <canvas id="canvas" width=500 height=500></canvas>
+        <div id="ok_word"></div>
+        <div id="count_letter"></div>
+       </div>
+    </div>
+   
    <script src = "GamePC.js"></script>
 </body>
 
