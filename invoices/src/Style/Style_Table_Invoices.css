@@ -1,0 +1,26 @@
+table{
+    border-collapse: collapse;
+    background-color: #FFF;
+    width: 100%;
+    margin:auto;
+}
+.th{
+    text-align: left;
+    height: 60px;
+}
+.tbody{
+    background-color:  #F1F3F6;
+    width: 100%;
+}
+.td{
+    border-bottom: 1px solid #F1F3F6;
+    padding-top:20px;
+}
+.invoices{
+    background-color: #FFF;;
+  
+}
+.invoices>p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:20px;
+}

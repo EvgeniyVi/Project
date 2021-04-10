@@ -1,0 +1,31 @@
+
+.Container{
+    background-color: #F1F3F6;
+    width: 90%;
+    margin:auto;
+    background-size: cover;
+}
+.App{
+    margin:auto;
+    width: 85%;
+    background-size: cover;
+}
+.App>p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:20px;
+}
+.Add_New{
+    background-color: #FFFFFF;
+    padding-bottom:20px;
+    padding-left: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:20px;
+}
+.button_add{
+    background-color: blue;
+    width: 75px;
+    height: 25px;
+    border-radius:15px;
+    color:white;
+    cursor: pointer;
+}
