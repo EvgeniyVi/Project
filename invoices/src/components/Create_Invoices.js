@@ -50,7 +50,6 @@ constructor(){
 
     
   render(){    
-      console.log(this.props.view);
       return(
         <div>
            <div className="create_invoices" >
@@ -62,7 +61,7 @@ constructor(){
                 <div className="number">
                 <label>Number:</label>
                 <br/>
-                <input type="text" minlength="3" placeholder="Number" name="number" id="number" value={this.state.number}  onChange={this.handleInputChange} />
+                <input type="text" minLength="3" placeholder="Number" name="number" id="number" value={this.state.number}  onChange={this.handleInputChange} />
                 </div> 
 
                <div className="date_created">
