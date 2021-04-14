@@ -44,7 +44,7 @@ constructor(){
         }
       )
      }
-      this.props.func();
+     this.props.func();
       this.props.view();
     }
 
@@ -55,42 +55,42 @@ constructor(){
            <div className="create_invoices" >
             <p>Create Invoices</p>
 
-              <div className="form">
+           
+            <div className="form">
 
-              <div className="inline_block" >
-                <div className="number">
-                <label>Number:</label>
-                <br/>
-                <input type="text" minLength="3" placeholder="Number" name="number" id="number" value={this.state.number}  onChange={this.handleInputChange} />
-                </div> 
+            <div className="inline_block" >
+              <div className="number">
+              <label>Number:</label>
+              <br/>
+              <input type="text" minlength="3" placeholder="Number" name="number" id="number" value={this.state.number}  onChange={this.handleInputChange} />
+           </div> 
 
-               <div className="date_created">
-               <label>Invoce_Date:</label>
-               <br/>
-                <input type="text" placeholder="Invoice_Date" name="date_created" id="date_created" value={this.state.date_created} onChange={this.handleInputChange}/>
-               </div>
-              
-              </div>
-               
-               
-               
-                 <div className="supplied_date">
-                 <label>Supply_Date:</label>
-                 <br/>
-                <input type="text" placeholder="Supply_Date" name="date_supplied" id="supplied_date" value={this.state.date_supplied} onChange={this.handleInputChange}/>
-                 </div>
-              
-               
+          <div className="date_created">
+            <label>Invoce_Date:</label>
+              <br/>
+           <input type="text" placeholder="Invoice_Date" name="date_created" id="date_created" value={this.state.date_created} onChange={this.handleInputChange}/>
+          </div>
 
-               <div className="comment">
-               <label>Comment:</label>
-               <br/>
-                <input type="text" placeholder="Comment" name="comment" id="comment" value={this.state.comment} maxLength={163} onChange={this.handleInputChange}/>
-               </div>
-                
-                <button onClick={()=>this.createList()} className="button_send">Send</button>
-              </div>
+    </div>
+ 
+ 
+ 
+        <div className="supplied_date">
+          <label>Supply_Date:</label>
+         <br/>
+        <input type="text" placeholder="Supply_Date" name="date_supplied" id="supplied_date" value={this.state.date_supplied} onChange={this.handleInputChange}/>
+       </div>
 
+ 
+
+          <div className="comment">
+           <label>Comment:</label>
+             <br/>
+            <input type="text" placeholder="Comment" name="comment" id="comment" value={this.state.comment} maxLength={163} onChange={this.handleInputChange}/>
+          </div>
+  
+           <button onClick={()=>this.createList()} className="button_send">Send</button>
+        </div>
           </div>  
         </div>
       )
